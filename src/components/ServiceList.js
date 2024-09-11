@@ -81,7 +81,7 @@ const ServiceList = () => {
       >
         {services.map((service, index) => (
           <Grid2 xs={12} sm={6} md={4} lg={3} key={index}>
-            <Card sx={{ width: 300, height: "auto" }}>
+            <Card sx={{ width: 400, height: "auto" }}>
               <CardMedia
                 component="img"
                 height="140"

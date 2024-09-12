@@ -6,8 +6,7 @@ import ServiceList from "./components/ServiceList";
 import { BrowserRouter as Router } from "react-router-dom";
 import ChatBot from "react-chatbotify";
 import config from "./config/chatbotconfig";
-import MessageParser from "./config/MessageParser";
-import ActionProvider from "./config/ActionProvider";
+import HealthChatBot from "./components/HealthChatbot";
 
 const App = () => {
   return (
@@ -18,11 +17,7 @@ const App = () => {
         <Box mt={4} mb={4}>
           <ServiceList />
         </Box>
-        <ChatBot
-          config={config}
-          messageParser={MessageParser}
-          actionProvider={ActionProvider}
-        />
+        <HealthChatBot config={config} />
       </Container>
       <Footer />
     </Router>

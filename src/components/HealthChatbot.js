@@ -62,7 +62,12 @@ const HealthChatBot = () => {
     start: {
       message:
         "Hey, Welcome to Health coach AI agent. How can I help you today?",
-      options: ["Health option 1", "Health option 2", "Health option 3"],
+      options: [
+        "Health option 1",
+        "Health option 2",
+        "Health option 3",
+        "Health option 4",
+      ],
       path: "process_options",
     },
     process_options: {
@@ -74,6 +79,8 @@ const HealthChatBot = () => {
             return await getData2();
           case "Health option 3":
             return await getData();
+          case "Health option 4":
+            return await getData();
           default:
             return "Sorry, I didn't understand that.";
         }
@@ -83,7 +90,12 @@ const HealthChatBot = () => {
     },
     loop: {
       message: "Do you need any more help?",
-      options: ["Health option 1", "Health option 2", "Health option 3"],
+      options: [
+        "Health option 1",
+        "Health option 2",
+        "Health option 3",
+        "Health option 4",
+      ],
       path: "process_options",
     },
   };

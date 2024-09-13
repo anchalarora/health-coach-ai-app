@@ -28,8 +28,6 @@ const Header = () => {
             <Typography variant="h6">Health Coach AI Agent</Typography>
           </Box>
           <Box sx={{ display: "flex", marginLeft: "auto", marginRight: 0 }}>
-            {" "}
-            {/* Align to right */}
             <Button color="inherit" component={Link} to="/">
               Home
             </Button>

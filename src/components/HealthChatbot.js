@@ -1,8 +1,10 @@
 import React from "react";
 import ChatBot from "react-chatbotify";
+import trainerIcon from "../assets/images/healthcoach.png";
+import crossIcon from "../assets/images/cross.png";
+import sendIcon from "../assets/images/send.png";
 
 const HealthChatBot = () => {
-  // Async function to fetch data from the API
   async function getData() {
     try {
       const response = await fetch(
@@ -90,19 +92,16 @@ const HealthChatBot = () => {
     header: {
       title: "Health Coach AI Agent",
       showAvatar: true,
-      avatar: "https://example.com/avatar.png",
-      closeChatIcon: "https://example.com/close-icon.png",
+      avatar: trainerIcon,
+      closeChatIcon: crossIcon,
     },
     general: {
       primaryColor: "#4CAF50",
       fontFamily: "Arial, sans-serif",
       showHeader: true,
     },
-    chatButton: {
-      icon: "https://example.com/chat-icon.png",
-    },
     chatInput: {
-      sendButtonIcon: "https://example.com/send-icon.png",
+      sendButtonIcon: sendIcon,
       enabledPlaceholderText: "Type your message here...",
     },
   };

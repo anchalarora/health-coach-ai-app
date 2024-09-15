@@ -1,29 +1,41 @@
-import { getData2, getData } from "../api/apiService";
+import {
+  getData2,
+  getData,
+  getBPRecommendation,
+  getBMISuggestion,
+  createWorkoutEvent,
+  maintainGoodHealth,
+} from "../api/apiService";
+
+const bmiSuggestions = getBMISuggestion();
+const bpRecommendation = getBPRecommendation();
+const createdWorkoutEvent = createWorkoutEvent();
+const maintainGoodHealthandLife = maintainGoodHealth();
 
 export const chatbotFlow = {
   start: {
     message: "Hey, Welcome to Health coach AI agent. How can I help you today?",
     options: [
-      "Health option 1",
-      "Health option 2",
-      "Health option 3",
-      "Health option 4",
+      "Personalised Plan for Healthy BMI",
+      "Lifestyle recommendation for Normal BP",
+      "How can I mantain good health and long life",
+      "Create Workout events on Calendar",
     ],
     path: "process_options",
   },
   process_options: {
     message: async (params) => {
       switch (params.userInput) {
-        case "Health option 1":
-          return await getData();
-        case "Health option 2":
-          return await getData2();
-        case "Health option 3":
-          return await getData();
-        case "Health option 4":
-          return await getData();
+        case "Personalised Plan for Healthy BMI":
+          return await bmiSuggestions.message;
+        case "Lifestyle recommendation for Normal BP":
+          return await bpRecommendation.message;
+        case "How can I mantain good health and long life":
+          return await maintainGoodHealthandLife.message;
+        case "Create Workout events on Calendar":
+          return await createdWorkoutEvent.message;
         default:
-          return "Sorry, I didn't understand that.";
+          return getData2();
       }
     },
     transition: { duration: 1 },
@@ -32,16 +44,16 @@ export const chatbotFlow = {
   loop: {
     message: "Do you need any more help?",
     options: [
-      "Health option 1",
-      "Health option 2",
-      "Health option 3",
-      "Health option 4",
+      "Personalised Plan for Healthy BMI",
+      "Lifestyle recommendation for Normal BP",
+      "How can I mantain good health and long life",
+      "Create Workout events on Calendar",
     ],
     path: "process_options",
   },
 };
 
-const flowForIndividualInput = {
+export const flowForIndividualInput = {
   start: {
     message: "Hey, Welcome to Health coach AI agent. How can I help you today?",
     path: "model_loop",
@@ -49,9 +61,9 @@ const flowForIndividualInput = {
   model_loop: {
     message: async (params) => {
       switch (params.userInput) {
-        case "title":
+        case "Health matrix":
           return await getData();
-        case "body":
+        case "Meal plan":
           return await getData2();
         default:
           return await getData();

@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Link for Backend For Health Coach APP : https://github.com/Ayobami6/ai_agent_hackaton
+Link for Backend git repository For Health Coach APP : https://github.com/Ayobami6/ai_agent_hackaton
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

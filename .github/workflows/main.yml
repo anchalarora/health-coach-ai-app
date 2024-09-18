@@ -7,6 +7,7 @@ on:
       
 env:
   CI: false
+   ACTIONS_ALLOW_UNSECURE_NODE_VERSION: true
 
 jobs:
   build:
@@ -20,7 +21,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 20
+          node-version: 16
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1

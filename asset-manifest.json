@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e856162a.css",
+    "main.js": "/static/js/main.b9bc6179.js",
+    "static/js/453.af4303b6.chunk.js": "/static/js/453.af4303b6.chunk.js",
+    "static/media/healthcoach.png": "/static/media/healthcoach.7c05d2f26ac0f5ff4d84.png",
+    "static/media/health-logo.png": "/static/media/health-logo.94cebfb0ded6a1bd4a36.png",
+    "static/media/cross.png": "/static/media/cross.485ec0bbb9f3dd856644.png",
+    "static/media/send.png": "/static/media/send.deecc6e72cd2c633ec83.png",
+    "index.html": "/index.html",
+    "main.e856162a.css.map": "/static/css/main.e856162a.css.map",
+    "main.b9bc6179.js.map": "/static/js/main.b9bc6179.js.map",
+    "453.af4303b6.chunk.js.map": "/static/js/453.af4303b6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e856162a.css",
+    "static/js/main.b9bc6179.js"
+  ]
+}

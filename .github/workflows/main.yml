@@ -7,7 +7,7 @@ on:
       
 env:
   CI: false
-   ACTIONS_ALLOW_UNSECURE_NODE_VERSION: true
+  ACTIONS_ALLOW_UNSECURE_NODE_VERSION: true
 
 jobs:
   build:
